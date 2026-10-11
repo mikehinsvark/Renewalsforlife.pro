@@ -106,3 +106,6 @@ render();
  if('IntersectionObserver' in window)new IntersectionObserver(entries=>{inView=entries[0].isIntersecting;syncTimer();},{threshold:.2}).observe(root);else{inView=true;}
  updatePause();
 })();
+
+// A still alternative keeps the looping GIF optional.
+(()=>{const image=document.getElementById('comparison-animation');const toggle=document.getElementById('comparison-motion');if(!image||!toggle)return;let moving=!window.matchMedia('(prefers-reduced-motion: reduce)').matches;function update(){image.src=moving?'assets/income-comparison.gif':'assets/income-comparison-still.png';toggle.textContent=moving?'Show still image':'Play animation';}toggle.addEventListener('click',()=>{moving=!moving;update();});update();})();
