@@ -28,3 +28,13 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}main,.section,.hero-cop
 @media(max-width:800px){.next-section{grid-template-columns:1fr;gap:35px}.insight-carousel{max-width:600px;justify-self:center}.insight-top .eyebrow{font-size:10px}.insight-caption strong{font-size:15px}}
 @media(max-width:520px){.insight-carousel{padding:11px}.insight-top .eyebrow{font-size:8px;letter-spacing:.8px}.insight-top button{font-size:11px}.insight-expand{font-size:10px;min-height:44px;padding:9px 12px;right:6px;bottom:6px}.insight-controls{gap:9px}.insight-caption strong{font-size:13px}.insight-arrow{width:44px;height:44px}.insight-hint{font-size:10px}.gallery-dialog-bar{flex-wrap:wrap;padding:10px;gap:8px}.gallery-dialog-bar>span{width:100%;font-size:12px}.gallery-dialog-bar button{flex:1}.gallery-dialog-nav{padding:10px}.gallery-image-scroll img{max-height:calc(94dvh - 190px)}}
 @media(prefers-reduced-motion:reduce){.insight-slide{animation:none}.insight-dots span{transition:none}}
+
+/* Lead with the videos and bring the comparison directly beneath the hero. */
+.hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:42px;padding-top:44px;padding-bottom:48px}
+.hero-video{width:100%;min-width:0;scroll-margin-top:28px}
+.hero-video .video-switcher button{min-height:76px;padding:14px 12px;gap:10px}
+.hero-video .video-choice-copy strong{font-size:12px;line-height:1.4}
+.hero-video .video-choice-copy small{font-size:8px;line-height:1.5;letter-spacing:.5px}
+.hero-video .video-caption{flex-wrap:wrap;gap:8px;font-size:10px}
+@media(max-width:1000px){.hero{grid-template-columns:1fr;gap:30px}.hero-video{max-width:760px;justify-self:center}.hero-copy{text-align:center}.hero-actions,.hero-footnote{justify-content:center}.hero-video .video-choice-copy strong{font-size:14px}}
+@media(max-width:600px){.hero{padding:30px 20px 30px;gap:28px}.hero-footnote{margin-top:24px}.hero-video .video-switcher button{min-height:64px;padding:12px 15px}.hero-video .video-choice-copy small{font-size:9px}.hero-video .video-caption{font-size:9px}.difference.section{padding-top:32px}}
