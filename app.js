@@ -54,13 +54,15 @@ function selectVideo(kind){
  const active=$('video-frame').querySelector('video');if(active)active.pause();
  $('video-frame').innerHTML=videoCover;
  const intro=kind==='intro';
- $('play-video').classList.toggle('image-cover',intro);
- $('play-video').querySelector('.intro-cover-art').hidden=!intro;
+ $('play-video').classList.add('image-cover');
+ const artwork=$('play-video').querySelector('.intro-cover-art');
+ artwork.src=intro?'assets/intro-cover.png':'assets/overview-cover.png';
+ artwork.hidden=false;
  const cover=$('play-video');cover.setAttribute('aria-label',intro?'Play The Income You Keep, 2-minute introduction':'Play the Renewals for Life full overview');
  cover.querySelector('.video-label').textContent=intro?'THE INCOME YOU KEEP · 2-MINUTE INTRO':'THE RENEWALS FOR LIFE FULL OVERVIEW';
  cover.querySelector('.video-title').innerHTML=intro?'The income<br><em>you keep.</em>':'What are you<br><em>really building?</em>';
  cover.querySelector('.video-bottom span').textContent=intro?'WATCH THE 2-MINUTE INTRO':'WATCH THE FULL OVERVIEW';
- $('video-hint').textContent='Press the gold play arrow to begin';
+ $('video-hint').textContent='Press the play arrow to begin';
  document.querySelectorAll('[data-video]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.video===kind)));
  cover.addEventListener('click',playVideo);
 }
